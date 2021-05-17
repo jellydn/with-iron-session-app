@@ -1,7 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+/* eslint-disable react/prop-types */
+import React from "react";
 
-const Form = ({ errorMessage, onSubmit }) => (
+type FormProps = {
+  errorMessage?: string;
+  onSubmit?: (...args: any[]) => any;
+};
+
+const Form: React.FC<FormProps> = ({ errorMessage, onSubmit }) => (
   <form onSubmit={onSubmit}>
     <label>
       <span>Type your GitHub username</span>
@@ -33,11 +38,6 @@ const Form = ({ errorMessage, onSubmit }) => (
       }
     `}</style>
   </form>
-)
+);
 
-export default Form
-
-Form.propTypes = {
-  errorMessage: PropTypes.string,
-  onSubmit: PropTypes.func,
-}
+export default Form;

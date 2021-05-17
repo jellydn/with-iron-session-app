@@ -1,20 +1,21 @@
-import Layout from '../components/Layout'
+import Layout from "../components/Layout";
 
 const Home = () => (
   <Layout>
     <h1>
       <img
         src="/GitHub-Mark-32px.png"
+        alt="github"
         width="32"
         height="32"
-        style={{ marginRight: '.3em', verticalAlign: 'middle' }}
+        style={{ marginRight: ".3em", verticalAlign: "middle" }}
       />
       <a href="https://github.com/vvo/next-iron-session">next-iron-session</a> -
       Authentication example
     </h1>
 
     <p>
-      This example creates an authentication system that uses a{' '}
+      This example creates an authentication system that uses a{" "}
       <b>signed and encrypted cookie to store session data</b>.
     </p>
 
@@ -46,8 +47,8 @@ const Home = () => (
         used through a token stored in a cookie.
       </li>
       <li>
-        Click logout and try to go to profile again. You'll get redirected to
-        the `/login` route.
+        Click logout and try to go to profile again. You&apos;ll get redirected
+        to the `/login` route.
       </li>
     </ol>
     <style jsx>{`
@@ -56,6 +57,6 @@ const Home = () => (
       }
     `}</style>
   </Layout>
-)
+);
 
-export default Home
+export default Home;

@@ -1,12 +1,12 @@
-import React from 'react'
-import Link from 'next/link'
-import useUser from '../lib/useUser'
-import { useRouter } from 'next/router'
-import fetchJson from '../lib/fetchJson'
+import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+import useUser from "../lib/useUser";
 
 const Header = () => {
-  const { user, mutateUser } = useUser()
-  const router = useRouter()
+  const { user, mutateUser } = useUser();
+  const router = useRouter();
   return (
     <header>
       <nav>
@@ -28,8 +28,13 @@ const Header = () => {
               <li>
                 <Link href="/profile-sg">
                   <a>
-                    <img src={user.avatarUrl} width={20} height={20} /> Profile
-                    (Static Generation, recommended)
+                    <img
+                      alt="profile"
+                      src={user.avatarUrl}
+                      width={20}
+                      height={20}
+                    />{" "}
+                    Profile (Static Generation, recommended)
                   </a>
                 </Link>
               </li>
@@ -41,13 +46,10 @@ const Header = () => {
               <li>
                 <a
                   href="/api/logout"
-                  onClick={async (e) => {
-                    e.preventDefault()
-                    mutateUser(
-                      await fetchJson('/api/logout', { method: 'POST' }),
-                      false
-                    )
-                    router.push('/login')
+                  onClick={(e) => {
+                    e.preventDefault();
+                    mutateUser(fetch("/api/logout", { method: "POST" }), false);
+                    router.push("/login");
                   }}
                 >
                   Logout
@@ -57,7 +59,12 @@ const Header = () => {
           )}
           <li>
             <a href="https://github.com/vvo/next-iron-session">
-              <img src="/GitHub-Mark-Light-32px.png" width="32" height="32" />
+              <img
+                alt="iron-session"
+                src="/GitHub-Mark-Light-32px.png"
+                width="32"
+                height="32"
+              />
             </a>
           </li>
         </ul>
@@ -97,7 +104,7 @@ const Header = () => {
         }
       `}</style>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
