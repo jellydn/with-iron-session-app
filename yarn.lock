@@ -1922,10 +1922,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-iron-session@4.1.13:
-  version "4.1.13"
-  resolved "https://registry.yarnpkg.com/next-iron-session/-/next-iron-session-4.1.13.tgz#fac2a40c318d0717069a23e2107aa115be361f2c"
-  integrity sha512-CHYeVtpdHDy4OjH1QppR0n2tF4eEp0hFalQIzhqNEPfG4AfbmqiVGZIVTipJRVc7YfCOS3MZx8B5/yKbM8gA7Q==
+next-iron-session@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/next-iron-session/-/next-iron-session-4.2.0.tgz#cad971389b0845ab4517d8b096dea817b022830f"
+  integrity sha512-RzdbAmB77HJYXPdWrOjsPPE/b6yiSDAwhXEnX5z6mSYUMh22vR1iJD/CeBjs3FWxL39qO78CsLtIjpcojFz4DA==
   dependencies:
     "@types/cookie" "^0.4.0"
     array.prototype.flat "^1.2.4"
